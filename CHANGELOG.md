@@ -5,6 +5,15 @@ All notable changes to this project are documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-06-23
+
+### Changed
+
+- Reviewed the upstream `jonmosco/kube-tmux` issues. Output stays clean in every
+  state: an empty or absent current context renders nothing rather than garbled
+  text (#22). The default segment color is a named color, so it survives the
+  tmux 3.7 format-expansion change unharmed. No code change needed.
+
 ## [1.0.0] - 2026-06-22
 
 ### Added

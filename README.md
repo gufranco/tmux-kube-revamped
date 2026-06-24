@@ -4,7 +4,7 @@
 
 **Current Kubernetes context and namespace in your tmux status bar, async, kubectl-free, never blocking.**
 
-[![Tests](https://github.com/gufranco/tmux-kube-revamped/actions/workflows/tests.yml/badge.svg)](https://github.com/gufranco/tmux-kube-revamped/actions/workflows/tests.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](CHANGELOG.md)
+[![Tests](https://github.com/tmux-revamped/tmux-kube-revamped/actions/workflows/tests.yml/badge.svg)](https://github.com/tmux-revamped/tmux-kube-revamped/actions/workflows/tests.yml) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](CHANGELOG.md)
 
 </div>
 
@@ -12,7 +12,7 @@
 
 Shows the active Kubernetes context and namespace, read straight from your kubeconfig. It parses `~/.kube/config` directly, so it works without `kubectl` installed and never forks a process on the hot path. The read runs in a detached background worker and the result is cached in tmux server options, so the status line never waits, and no temp file is ever written.
 
-Built from [tmux-plugin-template](https://github.com/gufranco/tmux-plugin-template).
+Built from [tmux-plugin-template](https://github.com/tmux-revamped/tmux-plugin-template).
 
 <table>
 <tr>
@@ -42,7 +42,7 @@ set -g status-right '#{kube} | %H:%M'
 With [TPM](https://github.com/tmux-plugins/tpm), add to `~/.tmux.conf`:
 
 ```tmux
-set -g @plugin 'gufranco/tmux-kube-revamped'
+set -g @plugin 'tmux-revamped/tmux-kube-revamped'
 ```
 
 Then press `prefix + I`, and put `#{kube}` somewhere in `status-left` or `status-right`.
@@ -50,7 +50,7 @@ Then press `prefix + I`, and put `#{kube}` somewhere in `status-left` or `status
 Manual install:
 
 ```bash
-git clone https://github.com/gufranco/tmux-kube-revamped ~/.tmux/plugins/tmux-kube-revamped
+git clone https://github.com/tmux-revamped/tmux-kube-revamped ~/.tmux/plugins/tmux-kube-revamped
 run-shell ~/.tmux/plugins/tmux-kube-revamped/kube-revamped.tmux
 ```
 

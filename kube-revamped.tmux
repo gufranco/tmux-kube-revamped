@@ -39,3 +39,7 @@ chmod +x "${KUBE_CMD}" 2>/dev/null || true
 
 update_option "status-left"
 update_option "status-right"
+
+# Bind the opt-in context/namespace switchers and the k9s popup. Each key
+# defaults to empty, so this binds nothing unless the user opts in.
+"${KUBE_CMD}" bind-keys 2>/dev/null || true
